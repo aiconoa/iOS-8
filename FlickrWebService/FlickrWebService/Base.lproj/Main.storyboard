@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="llk-Re-D8C">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+    </dependencies>
+    <scenes>
+        <!--Flickr Photo List Collection View Controller-->
+        <scene sceneID="CLX-Ii-ZlE">
+            <objects>
+                <collectionViewController id="llk-Re-D8C" customClass="FlickrPhotoListCollectionViewController" customModule="FlickrWebService" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="EtV-iq-ryT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OyW-y1-rvw">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="flickrPhotoCell" id="dF5-RU-tKb" customClass="FlickPhotoCellCollectionViewCell" customModule="FlickrWebService" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zKC-8f-hxX">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zKC-8f-hxX" secondAttribute="trailing" id="d67-WR-ueU"/>
+                                    <constraint firstAttribute="bottom" secondItem="zKC-8f-hxX" secondAttribute="bottom" id="mFS-4j-dbb"/>
+                                    <constraint firstItem="zKC-8f-hxX" firstAttribute="leading" secondItem="dF5-RU-tKb" secondAttribute="leading" id="pk1-XY-kea"/>
+                                    <constraint firstItem="zKC-8f-hxX" firstAttribute="top" secondItem="dF5-RU-tKb" secondAttribute="top" id="xg0-jM-Wvq"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="photoImageView" destination="zKC-8f-hxX" id="Xbo-TE-XM6"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="llk-Re-D8C" id="qrc-m2-g2y"/>
+                            <outlet property="delegate" destination="llk-Re-D8C" id="O31-5a-7Su"/>
+                        </connections>
+                    </collectionView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2tG-nR-Kvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-792" y="-83"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="OWE-oE-H98">
+            <objects>
+                <viewController storyboardIdentifier="imageViewController" id="SJ3-Q1-xR3" customClass="ImageViewController" customModule="FlickrWebService" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="egj-Ui-MTR"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Yd-MJ-B35"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G1b-9R-bc5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1JJ-vw-gnl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0Jc-Tg-BST" appends="YES" id="ziR-6a-CrK"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1JJ-vw-gnl" firstAttribute="top" secondItem="G1b-9R-bc5" secondAttribute="top" id="Ttd-dC-gT3"/>
+                            <constraint firstAttribute="trailing" secondItem="1JJ-vw-gnl" secondAttribute="trailing" id="cqP-3R-NnA"/>
+                            <constraint firstItem="4Yd-MJ-B35" firstAttribute="top" secondItem="1JJ-vw-gnl" secondAttribute="bottom" id="qqe-hs-vGF"/>
+                            <constraint firstItem="1JJ-vw-gnl" firstAttribute="leading" secondItem="G1b-9R-bc5" secondAttribute="leading" id="vH9-Ck-sRS"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="flickrPhotoImageView" destination="1JJ-vw-gnl" id="i1w-pS-DCW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iei-2c-nWl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0Jc-Tg-BST">
+                    <connections>
+                        <action selector="tapImage:" destination="SJ3-Q1-xR3" id="KqL-hZ-R1O"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-340" y="-83"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebNavigator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAA-Gw-6wC">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PRV-D8-304"/>
+                                    <barButtonItem systemItem="rewind" id="esS-CW-fwf">
+                                        <connections>
+                                            <action selector="goBack:" destination="BYZ-38-t0r" id="H0e-g7-SOC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ikH-nu-myK"/>
+                                    <barButtonItem systemItem="fastForward" id="5EG-20-bo1">
+                                        <connections>
+                                            <action selector="forwardButton:" destination="BYZ-38-t0r" id="vm2-xx-kh8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VRe-Fr-U4x"/>
+                                    <barButtonItem systemItem="action" id="ahi-zQ-nys">
+                                        <connections>
+                                            <action selector="share:" destination="BYZ-38-t0r" id="VbZ-EH-8dD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="WjO-Lt-NqH"/>
+                                    <barButtonItem systemItem="bookmarks" id="4qd-Nv-9th"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xcy-DR-sfa"/>
+                                    <barButtonItem systemItem="add" id="I8z-Q8-bSd"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vuh-6M-awy"/>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Reg-RQ-84c">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mbA-vD-SbJ">
+                                        <rect key="frame" x="20" y="7" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Jts-cT-w21"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3gs-vs-IfI"/>
+                                    <constraint firstAttribute="trailing" secondItem="mbA-vD-SbJ" secondAttribute="trailing" constant="20" symbolic="YES" id="4yr-X0-E6O"/>
+                                    <constraint firstAttribute="centerY" secondItem="mbA-vD-SbJ" secondAttribute="centerY" id="rbp-xs-wUq"/>
+                                    <constraint firstItem="mbA-vD-SbJ" firstAttribute="leading" secondItem="Reg-RQ-84c" secondAttribute="leading" constant="20" symbolic="YES" id="sGe-WR-2fy"/>
+                                    <constraint firstAttribute="centerX" secondItem="mbA-vD-SbJ" secondAttribute="centerX" constant="-0.5" id="vfY-CS-egx"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vfY-CS-egx"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8g-ka-bxO">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="HnB-qH-e3f"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jAA-Gw-6wC" firstAttribute="top" secondItem="A8g-ka-bxO" secondAttribute="bottom" id="3r5-0g-GMY"/>
+                            <constraint firstItem="Reg-RQ-84c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5Fh-Bh-gBW"/>
+                            <constraint firstAttribute="trailing" secondItem="jAA-Gw-6wC" secondAttribute="trailing" id="IoC-fq-csz"/>
+                            <constraint firstItem="Reg-RQ-84c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nse-d4-xuY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jAA-Gw-6wC" secondAttribute="bottom" id="VRB-fK-wES"/>
+                            <constraint firstAttribute="trailing" secondItem="Reg-RQ-84c" secondAttribute="trailing" id="VRi-gB-3ff"/>
+                            <constraint firstItem="A8g-ka-bxO" firstAttribute="top" secondItem="Reg-RQ-84c" secondAttribute="bottom" id="hfJ-FY-P4R"/>
+                            <constraint firstItem="A8g-ka-bxO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hgW-rj-u3h"/>
+                            <constraint firstItem="jAA-Gw-6wC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mmJ-ZQ-caM"/>
+                            <constraint firstAttribute="trailing" secondItem="A8g-ka-bxO" secondAttribute="trailing" id="wV1-CL-N4t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="esS-CW-fwf" id="2q3-z8-5K7"/>
+                        <outlet property="forwardButton" destination="5EG-20-bo1" id="tGc-Vd-RCE"/>
+                        <outlet property="searchField" destination="mbA-vD-SbJ" id="HBP-Uv-now"/>
+                        <outlet property="webView" destination="A8g-ka-bxO" id="Nyy-Ei-8mg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

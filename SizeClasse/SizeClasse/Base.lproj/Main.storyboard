@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SizeClasse" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uwz-ph-B5c" userLabel="red">
+                                <rect key="frame" x="0.0" y="20" width="300" height="580"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ad2-6I-PEC" userLabel="blue">
+                                <rect key="frame" x="300" y="20" width="300" height="580"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uwz-ph-B5c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FHY-0M-H8E"/>
+                            <constraint firstItem="uwz-ph-B5c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hgn-Fs-SV1"/>
+                            <constraint firstAttribute="width" secondItem="uwz-ph-B5c" secondAttribute="width" multiplier="2" id="QYW-AM-jju"/>
+                            <constraint firstAttribute="trailing" secondItem="Ad2-6I-PEC" secondAttribute="trailing" id="TPq-P9-uJR"/>
+                            <constraint firstItem="Ad2-6I-PEC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="UKF-59-LYP"/>
+                            <constraint firstItem="uwz-ph-B5c" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="WcI-tp-TwD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uwz-ph-B5c" secondAttribute="bottom" id="eoc-IJ-z3R"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ad2-6I-PEC" secondAttribute="bottom" id="qxW-GV-G65"/>
+                            <constraint firstItem="uwz-ph-B5c" firstAttribute="width" secondItem="Ad2-6I-PEC" secondAttribute="width" id="wQl-IZ-pe5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WcI-tp-TwD"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact"/>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="Ad2-6I-PEC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="QYW-AM-jju"/>
+                                <include reference="WcI-tp-TwD"/>
+                                <exclude reference="wQl-IZ-pe5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
