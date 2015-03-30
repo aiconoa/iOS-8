@@ -12,8 +12,7 @@
 		AC0442C119FA472D0072EA68 /* antibes.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0442BD19FA472D0072EA68 /* antibes.png */; };
 		AC0442C219FA472D0072EA68 /* paris.png in Resources */ = {isa = PBXBuildFile; fileRef = AC0442BE19FA472D0072EA68 /* paris.png */; };
 		DF5BFCCF19F0FF9400B71FF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5BFCCE19F0FF9400B71FF4 /* AppDelegate.swift */; };
-		DF5BFCD119F0FF9400B71FF4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5BFCD019F0FF9400B71FF4 /* FirstViewController.swift */; };
-		DF5BFCD319F0FF9400B71FF4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5BFCD219F0FF9400B71FF4 /* SecondViewController.swift */; };
+		DF5BFCD119F0FF9400B71FF4 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5BFCD019F0FF9400B71FF4 /* MapController.swift */; };
 		DF5BFCD619F0FF9400B71FF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF5BFCD419F0FF9400B71FF4 /* Main.storyboard */; };
 		DF5BFCD819F0FF9400B71FF4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF5BFCD719F0FF9400B71FF4 /* Images.xcassets */; };
 		DF5BFCDB19F0FF9400B71FF4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5BFCD919F0FF9400B71FF4 /* LaunchScreen.xib */; };
@@ -44,8 +43,7 @@
 		DF5BFCC919F0FF9400B71FF4 /* PhotoMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5BFCCD19F0FF9400B71FF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF5BFCCE19F0FF9400B71FF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF5BFCD019F0FF9400B71FF4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DF5BFCD219F0FF9400B71FF4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		DF5BFCD019F0FF9400B71FF4 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		DF5BFCD519F0FF9400B71FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF5BFCD719F0FF9400B71FF4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DF5BFCDA19F0FF9400B71FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -105,8 +103,7 @@
 			children = (
 				DF5BFCF819F108DF00B71FF4 /* images */,
 				DF5BFCCE19F0FF9400B71FF4 /* AppDelegate.swift */,
-				DF5BFCD019F0FF9400B71FF4 /* FirstViewController.swift */,
-				DF5BFCD219F0FF9400B71FF4 /* SecondViewController.swift */,
+				DF5BFCD019F0FF9400B71FF4 /* MapController.swift */,
 				DF5BFCD419F0FF9400B71FF4 /* Main.storyboard */,
 				DF5BFCD719F0FF9400B71FF4 /* Images.xcassets */,
 				DF5BFCD919F0FF9400B71FF4 /* LaunchScreen.xib */,
@@ -266,10 +263,9 @@
 			files = (
 				DF5BFD3219F11A8400B71FF4 /* Photo.swift in Sources */,
 				DF5BFCF519F1075B00B71FF4 /* SimplePhoto.swift in Sources */,
-				DF5BFCD319F0FF9400B71FF4 /* SecondViewController.swift in Sources */,
 				DF5BFCCF19F0FF9400B71FF4 /* AppDelegate.swift in Sources */,
 				DF5BFD3019F118D300B71FF4 /* PhotoMap.xcdatamodeld in Sources */,
-				DF5BFCD119F0FF9400B71FF4 /* FirstViewController.swift in Sources */,
+				DF5BFCD119F0FF9400B71FF4 /* MapController.swift in Sources */,
 				DF5BFCFC19F10BB000B71FF4 /* SimplePhotoMKAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

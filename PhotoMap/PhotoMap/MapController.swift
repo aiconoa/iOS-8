@@ -10,19 +10,28 @@ import CoreData
 import UIKit
 import MapKit
 
-class FirstViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapKitView: MKMapView!
     
-    var cCLocationManager = CLLocationManager()
+    var cLLocationManager : CLLocationManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mapKitView.delegate = self
         
-        cCLocationManager.requestWhenInUseAuthorization()
-        mapKitView.showsUserLocation = true
+        
+        let status = CLLocationManager.authorizationStatus()
+        if (status != .Denied && status != .Restricted) {
+            cLLocationManager = CLLocationManager()
+            cLLocationManager?.delegate = self
+            
+            if (status == .NotDetermined) {
+                cLLocationManager?.requestWhenInUseAuthorization()
+            }
+        }
+    
         
         loadNonCoreDataPhotos()
         loadCoreDataPhotos()
@@ -31,6 +40,25 @@ class FirstViewController: UIViewController, MKMapViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+
+        
+        if (status == .AuthorizedWhenInUse || status == .AuthorizedAlways) {
+            cLLocationManager?.desiredAccuracy = 5
+            cLLocationManager?.distanceFilter = 1
+            
+            cLLocationManager?.startUpdatingLocation()
+            mapKitView.showsUserLocation = true
+        }
+        
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        // TODO handle location update here
     }
     
     func loadNonCoreDataPhotos() {
@@ -92,15 +120,17 @@ class FirstViewController: UIViewController, MKMapViewDelegate {
         if annotation is MKUserLocation {
             return nil
         } else if annotation is SimplePhotoMKAnnotation {
+
             var annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "SimplePhoto")
             
             annotationView.canShowCallout = true
             
-            var image = UIImage(data: (annotation as SimplePhotoMKAnnotation).image)
-            var imageView = UIImageView(image: image)
-            imageView.frame = CGRect(x:0, y:0, width: 50, height: 50)
-            imageView.contentMode = .ScaleAspectFill
-            annotationView.leftCalloutAccessoryView = imageView
+            if let image = UIImage(data: (annotation as SimplePhotoMKAnnotation).image) {
+                var imageView = UIImageView(image: image)
+                imageView.frame = CGRect(x:0, y:0, width: 40, height: 40)
+                imageView.contentMode = .ScaleAspectFill
+                annotationView.leftCalloutAccessoryView = imageView
+            }
             
             return annotationView
         }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C4E35521-984C-4F5B-96E9-D5E6DFC7AEBB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PhotoMap</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AF6341829E764B3B904B394F1F49084943A2552A</key>
+		<string>https://github.com/aiconoa/iOS-8.git</string>
+		<key>CC61A3B55AE8F15FF492867B95DAB69B7515DC74</key>
+		<string>https://bitbucket.org/thomasgros/taaap.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PhotoMap/PhotoMap.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AF6341829E764B3B904B394F1F49084943A2552A</key>
+		<string>../../..</string>
+		<key>CC61A3B55AE8F15FF492867B95DAB69B7515DC74</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/aiconoa/iOS-8.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AF6341829E764B3B904B394F1F49084943A2552A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CC61A3B55AE8F15FF492867B95DAB69B7515DC74</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AF6341829E764B3B904B394F1F49084943A2552A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-8</string>
+		</dict>
+	</array>
+</dict>
+</plist>
